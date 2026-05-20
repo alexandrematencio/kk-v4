@@ -136,7 +136,7 @@ const asset = useAsset()
           width="1600"
           height="1000"
           loading="lazy"
-          class="absolute inset-0 w-full h-full object-cover opacity-25"
+          class="absolute inset-0 w-full h-full object-cover"
         />
         <div class="relative flex flex-col justify-between h-full gap-6">
           <span v-if="!story.bento.freshImage" class="text-5xl">🌿</span>
