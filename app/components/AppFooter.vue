@@ -17,7 +17,7 @@ defineProps<{
         <div>
           <div class="eyebrow text-thai-blue">QUOTIDIEN</div>
           <img
-            src="/img/logo/logo-khan-kluay-bnw.svg"
+            src="/img/logo/logo-khan-kluay-white.svg"
             :alt="site?.name ?? 'Khan Kluay'"
             width="1468"
             height="380"
