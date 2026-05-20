@@ -105,7 +105,7 @@ const asset = useAsset()
           :key="b.label"
           class="card flex flex-col justify-center items-start p-8 md:p-10 bg-paper"
         >
-          <span class="font-display font-extrabold text-5xl md:text-6xl text-brick">
+          <span class="font-display font-extrabold text-5xl md:text-6xl text-thai-blue">
             {{ b.value }}
           </span>
           <span class="mt-2 eyebrow">{{ b.label }}</span>

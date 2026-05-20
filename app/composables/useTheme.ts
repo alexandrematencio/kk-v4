@@ -1,14 +1,16 @@
-// Dev-only palette switcher (v1 = original earth/brick, v2 = thai-red/thai-blue).
+// Dev-only palette switcher.
+// v1 = original earth/brick, v2 = thai-red/thai-blue, v3 = refined Salon Thaï (default).
 // Remove the footer toggle + this composable before production.
-type Palette = 'v1' | 'v2'
+type Palette = 'v1' | 'v2' | 'v3'
 const STORAGE_KEY = 'kk-palette'
+const DEFAULT: Palette = 'v3'
 
 export function useTheme() {
-  const palette = useState<Palette>('palette', () => 'v1')
+  const palette = useState<Palette>('palette', () => DEFAULT)
 
   if (import.meta.client) {
     onMounted(() => {
-      const saved = (localStorage.getItem(STORAGE_KEY) as Palette | null) ?? 'v1'
+      const saved = (localStorage.getItem(STORAGE_KEY) as Palette | null) ?? DEFAULT
       palette.value = saved
       apply(saved)
     })
@@ -28,7 +30,9 @@ export function useTheme() {
   }
 
   function toggle() {
-    setPalette(palette.value === 'v1' ? 'v2' : 'v1')
+    const order: Palette[] = ['v1', 'v2', 'v3']
+    const next = order[(order.indexOf(palette.value) + 1) % order.length] ?? DEFAULT
+    setPalette(next)
   }
 
   return { palette, setPalette, toggle }

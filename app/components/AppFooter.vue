@@ -11,11 +11,11 @@ defineProps<{
 </script>
 
 <template>
-  <footer class="border-t border-divider/70 bg-paper">
+  <footer class="footer-dark border-t border-divider/70">
     <div class="container-content py-16 md:py-20">
       <div class="grid md:grid-cols-3 gap-12">
         <div>
-          <div class="eyebrow text-brick">QUOTIDIEN</div>
+          <div class="eyebrow text-thai-blue">QUOTIDIEN</div>
           <img
             src="/img/logo/logo-khan-kluay-bnw.svg"
             :alt="site?.name ?? 'Khan Kluay'"

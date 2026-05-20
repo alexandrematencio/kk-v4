@@ -41,6 +41,19 @@ const { palette, setPalette } = useTheme()
       >
         v2
       </button>
+      <button
+        type="button"
+        class="px-2.5 py-1 rounded-full font-semibold transition-colors"
+        :class="
+          palette === 'v3'
+            ? 'bg-bg text-ink shadow-sm'
+            : 'text-muted hover:text-ink'
+        "
+        :aria-pressed="palette === 'v3'"
+        @click="setPalette('v3')"
+      >
+        v3
+      </button>
     </div>
   </div>
 </template>

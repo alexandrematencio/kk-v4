@@ -35,6 +35,39 @@
 }
 
 /* ----------------------------------------------------
+   Version 3 — "Salon Thaï" (refined warm-neutral)
+   Crisp white cards on warm oat ground; sage instead
+   of pea-green; terracotta instead of rust; slate ink.
+   Same Tailwind utilities, repointed.
+   ---------------------------------------------------- */
+[data-theme="v3"] {
+  /* Foundation */
+  --color-bg: #f4ede0;             /* warm oat ground */
+  --color-surface: color-mix(in oklab, #ffffff 75%, #f4ede0);  /* soft warm off-white (~25% oat blend) — cards feel less stark vs bg */
+  --color-paper: #ffffff;          /* clean white for badge cards */
+  --color-surface-tint: #c9b78a;   /* warm camel — hairline borders */
+  --color-divider: #ddd3bb;        /* subtle warm divider */
+
+  /* Ink — slate-tinted (replaces v1's warm brown) */
+  --color-ink: #1d1f29;
+  --color-ink-soft: #3a3f4b;
+  --color-muted: #7c7468;
+
+  /* Brick → refined terracotta */
+  --color-brick: #a14528;
+  --color-brick-dark: #823620;
+
+  /* Olive → sage (less pea-green / health-food) */
+  --color-olive: #5d7546;
+  --color-olive-dark: #46562f;
+  --color-lime: #cbd6a3;           /* muted celadon */
+
+  /* Action → calmer coral-rust (less WordPress-CTA-red) */
+  --color-action: #c93b1f;
+  --color-action-dark: #a72f17;
+}
+
+/* ----------------------------------------------------
    Version 2 — Thai White / Thai Red / Thai Blue
    Activated by <html data-theme="v2">
    Overrides only the @theme color tokens; Tailwind
@@ -56,6 +89,23 @@
   --color-olive: #241d4f;          /* primary (Thai blue) */
   --color-olive-dark: #3a3258;     /* secondary */
   --color-lime: #b8b3d6;           /* soft accent — light blue tint */
+}
+
+/* ----------------------------------------------------
+   Dark section scope (used by footer)
+   Redefines color tokens inside the scope so Tailwind
+   utilities (text-ink, text-thai-blue, border-divider/…)
+   automatically flip to light variants. No template
+   surgery required beyond adding the `footer-dark` class.
+   ---------------------------------------------------- */
+.footer-dark {
+  --color-ink: #f6f1e7;             /* warm off-white text */
+  --color-ink-soft: #cfc8b8;        /* mid warm light */
+  --color-muted: #8e8678;           /* warm dim */
+  --color-divider: #4a4f5a;         /* slate divider visible on dark bg */
+  --color-thai-blue: #b6b3d4;       /* light lavender — preserves "blue" identity */
+  background-color: #1f2229;
+  color: var(--color-ink);
 }
 
 @layer base {
