@@ -13,6 +13,8 @@ const { data: site } = await useAsyncData('site-commander', () =>
 
 const { items: cart, total, totalQty, add, decrement, remove } = useCart()
 
+const asset = useAsset()
+
 type Category = 'entrees' | 'plats' | 'desserts' | 'boissons'
 const activeCategory = ref<Category>('plats')
 
@@ -173,7 +175,7 @@ definePageMeta({
         >
           <img
             v-if="item.image"
-            :src="item.image"
+            :src="asset(item.image)"
             :alt="item.title"
             loading="lazy"
             width="600"

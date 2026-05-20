@@ -10,6 +10,8 @@ defineProps<{
   }
 }>()
 
+const asset = useAsset()
+
 function fmtPrice(p: number) {
   return p.toFixed(2).replace('.', ',') + '€'
 }
@@ -25,7 +27,7 @@ function fmtPrice(p: number) {
       class="aspect-[4/3] -mx-px -mt-px overflow-hidden bg-surface-tint/20"
     >
       <img
-        :src="item.image"
+        :src="asset(item.image)"
         :alt="item.title"
         loading="lazy"
         width="1200"

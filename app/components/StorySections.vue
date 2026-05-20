@@ -35,6 +35,8 @@ const props = withDefaults(
 )
 
 const HeroTag = computed(() => (props.asH1 ? 'h1' : 'h2'))
+
+const asset = useAsset()
 </script>
 
 <template>
@@ -65,7 +67,7 @@ const HeroTag = computed(() => (props.asH1 ? 'h1' : 'h2'))
       >
         <img
           v-if="story.bento.quoteImage"
-          :src="story.bento.quoteImage"
+          :src="asset(story.bento.quoteImage)"
           :alt="story.bento.eyebrow"
           width="1200"
           height="1600"
@@ -96,7 +98,7 @@ const HeroTag = computed(() => (props.asH1 ? 'h1' : 'h2'))
       >
         <img
           v-if="story.bento.whyImage"
-          :src="story.bento.whyImage"
+          :src="asset(story.bento.whyImage)"
           :alt="story.bento.whyTitle"
           width="1600"
           height="1000"
@@ -129,7 +131,7 @@ const HeroTag = computed(() => (props.asH1 ? 'h1' : 'h2'))
       >
         <img
           v-if="story.bento.freshImage"
-          :src="story.bento.freshImage"
+          :src="asset(story.bento.freshImage)"
           :alt="story.bento.freshTitle"
           width="1600"
           height="1000"
@@ -150,7 +152,7 @@ const HeroTag = computed(() => (props.asH1 ? 'h1' : 'h2'))
       <article class="card lg:col-span-4 p-8 md:p-10 bg-surface relative overflow-hidden">
         <img
           v-if="story.bento.bridgeImage"
-          :src="story.bento.bridgeImage"
+          :src="asset(story.bento.bridgeImage)"
           :alt="story.bento.bridgeTitle"
           width="1600"
           height="1000"
@@ -175,7 +177,7 @@ const HeroTag = computed(() => (props.asH1 ? 'h1' : 'h2'))
         </div>
         <img
           v-if="story.bento.gestureImage"
-          :src="story.bento.gestureImage"
+          :src="asset(story.bento.gestureImage)"
           :alt="story.bento.gestureTitle"
           width="800"
           height="1000"
@@ -200,7 +202,7 @@ const HeroTag = computed(() => (props.asH1 ? 'h1' : 'h2'))
         >
           <div v-if="p.image" class="aspect-[16/10] overflow-hidden">
             <img
-              :src="p.image"
+              :src="asset(p.image)"
               :alt="p.title"
               loading="lazy"
               width="1600"

@@ -2,6 +2,8 @@
 defineProps<{
   category: { slug: string; label: string; count: number; image?: string }
 }>()
+
+const asset = useAsset()
 </script>
 
 <template>
@@ -15,7 +17,7 @@ defineProps<{
     >
       <img
         v-if="category.image"
-        :src="category.image"
+        :src="asset(category.image)"
         :alt="category.label"
         loading="lazy"
         width="800"

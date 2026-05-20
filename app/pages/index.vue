@@ -12,6 +12,8 @@ useSeoMeta({
   description:
     "Khan Kluay fusionne l'énergie vibrante de Bangkok avec l'élégance parisienne. Cuisine Thaï Halal, fait maison.",
 })
+
+const asset = useAsset()
 </script>
 
 <template>
@@ -40,7 +42,7 @@ useSeoMeta({
       >
         <img
           v-if="home.signature.image"
-          :src="home.signature.image"
+          :src="asset(home.signature.image)"
           :alt="home.signature.name"
           width="1200"
           height="900"

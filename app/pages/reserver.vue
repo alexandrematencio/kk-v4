@@ -22,6 +22,8 @@ useSeoMeta({
   description:
     "Réservez votre table chez Khan Kluay, cantine thaï halal à Paris 11ème.",
 })
+
+const asset = useAsset()
 </script>
 
 <template>
@@ -32,7 +34,7 @@ useSeoMeta({
     >
       <img
         v-if="booking.image"
-        :src="booking.image"
+        :src="asset(booking.image)"
         :alt="booking.title"
         width="1600"
         height="900"
@@ -165,7 +167,7 @@ useSeoMeta({
         <div class="card overflow-hidden bg-paper">
           <div v-if="booking.info.mapImage" class="aspect-[16/10] overflow-hidden">
             <img
-              :src="booking.info.mapImage"
+              :src="asset(booking.info.mapImage)"
               :alt="booking.info.name"
               loading="lazy"
               width="1600"
@@ -210,7 +212,7 @@ useSeoMeta({
         >
           <img
             v-if="booking.info.ambianceImage"
-            :src="booking.info.ambianceImage"
+            :src="asset(booking.info.ambianceImage)"
             alt="Ambiance"
             width="1600"
         height="900"
