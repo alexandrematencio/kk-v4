@@ -141,10 +141,10 @@ const asset = useAsset()
         <div class="relative flex flex-col justify-between h-full gap-6">
           <span v-if="!story.bento.freshImage" class="text-5xl">🌿</span>
           <div :class="story.bento.freshImage && 'mt-auto'">
-            <h3 class="font-display font-extrabold text-2xl text-olive-dark">
+            <h3 class="font-display font-extrabold text-2xl text-white">
               {{ story.bento.freshTitle }}
             </h3>
-            <p class="mt-3 text-sm leading-relaxed text-ink-soft">{{ story.bento.freshBody }}</p>
+            <p class="mt-3 text-sm leading-relaxed text-white">{{ story.bento.freshBody }}</p>
           </div>
         </div>
       </article>
