@@ -1,0 +1,12 @@
+slug: pad-thai-tradition
+title: Pad Thai Tradition
+category: plats
+price: 16.5
+order: 1
+signature: true
+badges:
+  - POPULAIRE
+  - SANS GLUTEN
+description: |
+  Nouilles de riz sautées, tofu, crevettes, cacahuètes pilées et citron vert.
+image: /img/padthai.png

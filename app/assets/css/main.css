@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  /* Khan Kluay — Design tokens (Version 1 — Earth/Brick) */
+  --color-bg: #fbf9f5;
+  --color-surface: #f5f3ef;
+  --color-paper: #efeeea;
+  --color-surface-tint: #dec0b9;
+  --color-divider: #e4e2de;
+
+  --color-ink: #1b1c1a;
+  --color-ink-soft: #57423d;
+  --color-muted: #6b7280;
+
+  --color-brick: #8c2d14;
+  --color-brick-dark: #83260e;
+  --color-olive: #4a6f14;
+  --color-olive-dark: #45680d;
+  --color-lime: #c4f187;
+
+  /* Khan Kluay — the blue elephant. Brand color, used surgically. */
+  --color-thai-blue: #001b95;
+  --color-thai-blue-dark: #001370;
+
+  /* Action color — every interactive control (buttons, links, focus rings). */
+  --color-action: #e22b02;
+  --color-action-dark: #b22202;
+
+  --font-display: "Epilogue", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 12px;
+
+  --container-content: 1280px;
+}
+
+/* ----------------------------------------------------
+   Version 2 — Thai White / Thai Red / Thai Blue
+   Activated by <html data-theme="v2">
+   Overrides only the @theme color tokens; Tailwind
+   utilities (bg-brick, text-ink-soft, …) repoint live.
+   ---------------------------------------------------- */
+[data-theme="v2"] {
+  --color-bg: #f7f7f7;
+  --color-surface: #ffffff;
+  --color-paper: #f5f3ef;          /* surface-alt */
+  --color-surface-tint: #f0ede8;   /* border-light */
+  --color-divider: #e5e3de;        /* border */
+
+  --color-ink: #1a1a1e;            /* text */
+  --color-ink-soft: #2a2a2e;       /* body — slightly softer than ink */
+  --color-muted: #6b6b6b;          /* text-muted */
+
+  --color-brick: #a51931;          /* accent (Thai red) */
+  --color-brick-dark: #8b1528;     /* accent-hover */
+  --color-olive: #241d4f;          /* primary (Thai blue) */
+  --color-olive-dark: #3a3258;     /* secondary */
+  --color-lime: #b8b3d6;           /* soft accent — light blue tint */
+}
+
+@layer base {
+  html, body {
+    background: var(--color-bg);
+    color: var(--color-ink-soft);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    color: var(--color-thai-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .card {
+    background: var(--color-surface);
+    border-radius: var(--radius-card);
+    border: 1px solid color-mix(in oklab, var(--color-surface-tint) 18%, transparent);
+  }
+
+  .btn-primary {
+    background: var(--color-action);
+    color: #fff;
+    padding: 0.875rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: background 200ms ease;
+  }
+  .btn-primary:hover { background: var(--color-action-dark); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--color-ink);
+    padding: 0.875rem 1.5rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-ink);
+    font-weight: 600;
+    transition: background 200ms ease;
+  }
+  .btn-secondary:hover { background: var(--color-ink); color: #fff; }
+
+  .container-content {
+    max-width: var(--container-content);
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+}

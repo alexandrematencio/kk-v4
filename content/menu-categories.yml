@@ -1,0 +1,17 @@
+items:
+  - slug: entrees
+    label: Entrées
+    description: Pour ouvrir l'appétit, fraîcheur et croquant.
+    order: 1
+  - slug: plats
+    label: Plats Signature
+    description: Le cœur de notre carte, les grandes recettes de famille.
+    order: 2
+  - slug: desserts
+    label: Desserts
+    description: Douceurs thaï pour clore le repas.
+    order: 3
+  - slug: boissons
+    label: Boissons
+    description: Sans alcool, infusions et boissons fraîches.
+    order: 4

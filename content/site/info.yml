@@ -1,0 +1,13 @@
+name: Khan Kluay
+tagline: L'esprit de Bangkok, le cœur de Paris.
+address: 12 Rue de la Gastronomie Thaï, 75011 Paris, France
+phone: 01 23 45 67 89
+hours:
+  - day: Lundi - Jeudi
+    hours: 11:30 - 22:30
+  - day: Vendredi
+    hours: 14:30 - 23:00
+  - day: Samedi - Dimanche
+    hours: 12:00 - 23:00
+social:
+  instagram: "@khankluay.paris"

@@ -1,0 +1,40 @@
+hero:
+  eyebrow: NOTRE ORIGINE
+  title: |
+    L'héritage
+    d'une terre
+    rouge.
+  body: |
+    Khan Kluay n'est pas seulement un restaurant, c'est le prolongement d'une
+    table familiale nichée au cœur de l'Isan. C'est ici, sur les terres
+    argileuses de Thaïlande, que notre passion est née, entre les parfums de
+    citronnelle fraîche et le rythme hypnotique du mortier en bois.
+  cta:
+    label: Découvrir la Carte
+    href: /carte
+bento:
+  eyebrow: DEPUIS 1984
+  quote: "« La cuisine est le langage du cœur. »"
+  whyTitle: Pourquoi Khan Kluay ?
+  whyBody: |
+    Khan Kluay est le nom d'un petit éléphant bleu légendaire en Thaïlande,
+    symbole de courage, de loyauté et de persévérance. Comme lui, notre
+    établissement a traversé les frontières pour apporter à Paris la force des
+    saveurs authentiques. L'éléphant représente notre ancrage dans la terre
+    thaïlandaise, tandis que le bleu évoque la sérénité et la modernité de
+    notre démarche culinaire.
+  freshTitle: 100% Frais
+  freshBody: Herbes importées hebdomadairement de nos jardins familiaux en Isan.
+  bridgeTitle: De Bangkok à Paris
+  bridgeBody: |
+    Notre « Cantine Authentique » se veut un pont culturel. Nous avons conservé
+    le piquant audacieux de la rue thaïlandaise tout en adoptant l'élégance et
+    la rigueur du bistrot parisien. Pas de folklore superflu, juste le goût vrai.
+  gestureTitle: Le geste ancestral
+pillars:
+  - title: Respect du Produit
+    body: Légumes de saison et viandes locales, sublimés par des épices rares.
+  - title: Énergie Urbaine
+    body: Un service rapide et vibrant, fidèle à l'esprit des marchés de nuit.
+  - title: Hospitalité Isan
+    body: Un accueil comme à la maison, où chaque client est un invité de la famille.

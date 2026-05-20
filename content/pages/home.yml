@@ -1,0 +1,36 @@
+eyebrow: PARIS X BANGKOK
+title: La Cantine Authentique
+intro: |
+  Khan Kluay fusionne l'énergie vibrante des rues de Bangkok avec l'élégance urbaine de Paris. Une cuisine Thaï Halal, généreuse et sans compromis, inspirée par les recettes secrètes de notre famille.
+signature:
+  label: SIGNATURE
+  name: Pad Thaï Royal
+  image: /img/padthairoyal.png
+categories:
+  - slug: entrees
+    label: Entrées
+    count: 12
+    image: /img/starters.png
+  - slug: currys
+    label: Currys
+    count: 8
+    image: /img/curry.png
+  - slug: desserts
+    label: Desserts
+    count: 5
+    image: /img/desserts.png
+  - slug: boissons
+    label: Boissons
+    count: 10
+    image: /img/boissons.png
+roots:
+  eyebrow: L'Héritage de Grand-Mère
+  title: C'est frais, c'est bon, c'est ici.
+  quote: "« La cuisine est le langage du cœur. »"
+  body: |
+    Chaque épice, chaque geste, chaque saveur raconte l'histoire de notre famille, originaire des terres rouges de Thaïlande. Khan Kluay n'est pas seulement un restaurant, c'est notre salon parisien où nous partageons l'authenticité de nos racines avec modernité.
+  badges:
+    - value: "100%"
+      label: HALAL
+    - value: Fait Maison
+      label: QUOTIDIEN

@@ -1,0 +1,26 @@
+title: |
+  Réserver
+  une Table
+intro: |
+  Vivez l'expérience de la cuisine thaïlandaise authentique au cœur de Paris.
+submitLabel: Confirmer la réservation
+partySizes:
+  - "1"
+  - "2"
+  - "3"
+  - "4"
+  - "5"
+  - "6+"
+info:
+  name: Khan Kluay Paris
+  address: |
+    12 Rue de la Gastronomie Thaï
+    75011 Paris, France
+  phone: 01 23 45 67 89
+  hours:
+    - day: Lundi - Vendredi
+      hours: 12:00 - 14:30 | 19:00 - 22:30
+    - day: Samedi
+      hours: 12:00 - 23:00
+    - day: Dimanche
+      hours: Fermé
