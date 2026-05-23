@@ -19,7 +19,7 @@ const asset = useAsset()
 <template>
   <div v-if="home" class="container-content py-12 md:py-16 space-y-20 md:space-y-28">
     <!-- HERO BENTO -->
-    <section class="grid lg:grid-cols-3 gap-4 md:gap-6">
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
       <article class="card lg:col-span-2 p-8 md:p-16 flex flex-col justify-center min-h-[420px]">
         <div class="eyebrow">{{ home.eyebrow }}</div>
         <h1 class="mt-4 text-5xl md:text-7xl">{{ home.title }}</h1>
@@ -88,7 +88,7 @@ const asset = useAsset()
     <StorySections v-if="story" :story="story" />
 
     <!-- FAMILY ROOTS -->
-    <section class="grid lg:grid-cols-5 gap-6 md:gap-10 items-stretch">
+    <section class="grid grid-cols-1 lg:grid-cols-5 gap-6 md:gap-10 items-stretch">
       <div class="card lg:col-span-3 p-8 md:p-14 bg-surface">
         <div class="eyebrow">{{ home.roots.eyebrow.toUpperCase() }}</div>
         <p class="mt-6 font-display text-3xl md:text-4xl text-ink leading-tight italic">
@@ -99,7 +99,7 @@ const asset = useAsset()
         </p>
       </div>
 
-      <div class="lg:col-span-2 grid grid-rows-2 gap-4 md:gap-5">
+      <div class="lg:col-span-2 grid grid-cols-1 grid-rows-2 gap-4 md:gap-5">
         <div
           v-for="b in home.roots.badges"
           :key="b.label"

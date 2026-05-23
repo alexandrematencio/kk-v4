@@ -13,7 +13,7 @@ defineProps<{
 <template>
   <footer class="footer-dark border-t border-divider/70">
     <div class="container-content py-16 md:py-20">
-      <div class="grid md:grid-cols-3 gap-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
           <div class="eyebrow text-thai-blue">QUOTIDIEN</div>
           <img

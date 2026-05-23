@@ -61,11 +61,11 @@ const asset = useAsset()
       </div>
     </header>
 
-    <div class="grid lg:grid-cols-5 gap-6 md:gap-10">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 md:gap-10">
       <!-- FORM -->
       <section class="card lg:col-span-3 p-6 md:p-10 bg-white">
         <form v-if="!submitted" class="space-y-6" @submit.prevent="onSubmit">
-          <div class="grid sm:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <label class="block">
               <span class="text-xs font-semibold uppercase tracking-wider text-ink">Date</span>
               <input
@@ -163,7 +163,7 @@ const asset = useAsset()
       </section>
 
       <!-- INFO COLUMN -->
-      <aside class="lg:col-span-2 grid gap-4 md:gap-5 content-start">
+      <aside class="lg:col-span-2 grid grid-cols-1 gap-4 md:gap-5 content-start">
         <div class="card overflow-hidden bg-paper">
           <div v-if="booking.info.mapImage" class="aspect-[16/10] overflow-hidden">
             <img

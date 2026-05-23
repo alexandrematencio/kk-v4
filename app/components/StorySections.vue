@@ -42,7 +42,7 @@ const asset = useAsset()
 <template>
   <div class="space-y-20 md:space-y-28">
     <!-- HERO NARRATIVE -->
-    <section class="grid lg:grid-cols-5 gap-6 md:gap-10 items-stretch">
+    <section class="grid grid-cols-1 lg:grid-cols-5 gap-6 md:gap-10 items-stretch">
       <div class="card lg:col-span-3 p-8 md:p-16 bg-surface">
         <div class="eyebrow">{{ story.hero.eyebrow }}</div>
         <component
@@ -89,7 +89,7 @@ const asset = useAsset()
     </section>
 
     <!-- BENTO STORYTELLING -->
-    <section aria-labelledby="story-bento-heading" class="grid lg:grid-cols-12 gap-4 md:gap-6">
+    <section aria-labelledby="story-bento-heading" class="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6">
       <h2 id="story-bento-heading" class="sr-only">Le petit éléphant bleu</h2>
 
       <!-- The blue elephant card — the one bold thai-blue moment -->
@@ -194,7 +194,7 @@ const asset = useAsset()
         <h2 class="mt-2 text-3xl md:text-5xl">Nos piliers culinaires</h2>
       </div>
 
-      <div class="mt-10 md:mt-12 grid md:grid-cols-3 gap-4 md:gap-6">
+      <div class="mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
         <article
           v-for="(p, i) in story.pillars"
           :key="p.title"
