@@ -13,6 +13,7 @@ const { data: site } = await useAsyncData('site-commander', () =>
 
 const { items: cart, total, totalQty, add, decrement, remove } = useCart()
 
+const baseURL = useRuntimeConfig().app.baseURL
 const asset = useAsset()
 
 type Category = 'entrees' | 'plats' | 'desserts' | 'boissons'
@@ -129,7 +130,11 @@ definePageMeta({
         :href="`tel:${phoneTel}`"
         class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-ink text-action-dark font-medium hover:bg-action hover:border-action hover:text-white transition-colors"
       >
-        <span aria-hidden="true" class="phone-icon block w-5 h-5" />
+        <span
+          aria-hidden="true"
+          class="phone-icon block w-5 h-5"
+          :style="{ '--mask': `url(${baseURL}img/icons/phone.svg)` }"
+        />
         <span>Appeler pour commander</span>
       </a>
       <p class="text-[11px] tracking-[0.15em] uppercase text-muted/70">
@@ -284,8 +289,8 @@ definePageMeta({
 <style scoped>
 .phone-icon {
   background-color: currentColor;
-  -webkit-mask-image: url('/img/icons/phone.svg');
-  mask-image: url('/img/icons/phone.svg');
+  -webkit-mask-image: var(--mask);
+  mask-image: var(--mask);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;

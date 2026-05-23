@@ -1,10 +1,11 @@
 <script setup lang="ts">
+const baseURL = useRuntimeConfig().app.baseURL
 const links = [
-  { to: '/', label: 'Accueil', icon: '/img/icons/home.svg' },
-  { to: '/carte', label: 'La Carte', icon: '/img/icons/carte.svg' },
-  { to: '/commander', label: 'Commander', icon: '/img/icons/order.svg' },
-  { to: '/reserver', label: 'Réserver', icon: '/img/icons/reserver.svg' },
-  { to: '/histoire', label: 'Histoire', icon: '/img/icons/story.svg' },
+  { to: '/', label: 'Accueil', icon: 'img/icons/home.svg' },
+  { to: '/carte', label: 'La Carte', icon: 'img/icons/carte.svg' },
+  { to: '/commander', label: 'Commander', icon: 'img/icons/order.svg' },
+  { to: '/reserver', label: 'Réserver', icon: 'img/icons/reserver.svg' },
+  { to: '/histoire', label: 'Histoire', icon: 'img/icons/story.svg' },
 ]
 </script>
 
@@ -22,7 +23,7 @@ const links = [
           <span
             aria-hidden="true"
             class="nav-icon block w-6 h-6"
-            :style="{ '--icon': `url(${l.icon})` }"
+            :style="{ '--icon': `url(${baseURL}${l.icon})` }"
           />
           <span class="tracking-wide">{{ l.label }}</span>
         </NuxtLink>

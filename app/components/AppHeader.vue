@@ -1,6 +1,7 @@
 <script setup lang="ts">
 defineProps<{ site?: { name?: string } | null }>()
 
+const baseURL = useRuntimeConfig().app.baseURL
 const { totalQty } = useCart()
 
 const links = [
@@ -53,7 +54,11 @@ const links = [
           aria-label="Panier"
           class="relative inline-flex items-center justify-center w-11 h-11 rounded-full bg-action text-white hover:bg-action-dark transition-colors"
         >
-          <span aria-hidden="true" class="cart-icon block w-5 h-5" />
+          <span
+            aria-hidden="true"
+            class="cart-icon block w-5 h-5"
+            :style="{ '--mask': `url(${baseURL}img/icons/cart.svg)` }"
+          />
           <span
             v-if="totalQty > 0"
             class="absolute -top-1 -right-1 bg-thai-blue text-white text-[10px] font-extrabold rounded-full min-w-5 h-5 px-1 flex items-center justify-center ring-2 ring-bg"
@@ -69,8 +74,8 @@ const links = [
 <style scoped>
 .cart-icon {
   background-color: currentColor;
-  -webkit-mask-image: url('/img/icons/cart.svg');
-  mask-image: url('/img/icons/cart.svg');
+  -webkit-mask-image: var(--mask);
+  mask-image: var(--mask);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
